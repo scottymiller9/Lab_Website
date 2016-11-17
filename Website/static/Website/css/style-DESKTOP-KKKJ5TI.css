@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+}
+
+body {
+    background: white;
+    margin-left: 20px;
+    url("images/background.jpg") no-repeat right;
+}

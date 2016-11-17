@@ -1,0 +1,35 @@
+{% load static %}
+<head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{%  static 'Website/css/contact.css' %}">
+
+
+    <title>Contact Form</title>
+
+</head>
+
+<body>
+
+<h1 id="contact">Contact the Burke Lab</h1>
+
+<form action="/Website/contact_form/" method="post">
+    <label for="your_name">Your name </label> <br>
+    <input id="your_name" type="text" name="your_name" value="{{ contact_name }}"> <br>
+    <label for="your_email">Your email address</label> <br>
+    <input id="your_email" type="email" name="your_email" value="{{ contact_email }}"> <br>
+    <label for="your_message">Your message</label><br>
+    <input id="your_message" type="text" name="your_message" value="{{ form_content|safe|striptags }}"><br><br>
+    <button type="submit">Submit</button>
+    {% csrf_token %}
+</form>
+
+
+
+
+
+</body>
+
+<br>
+
+<a href="/Website">Back to Homepage</a>
