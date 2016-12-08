@@ -10,7 +10,7 @@ def lab_info(request):
 
 
 def home(request):
-    return render(request, 'Website/Test.html')
+    return render(request, 'Website/home.html')
 
 
 def lab_members(request):
